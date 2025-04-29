@@ -1,0 +1,10 @@
+Backend development steps:
+    1.- Create the database and connect it to the application (setup application.propierties). <- Done
+    2.- Create the models and repositories for the database. <- Done
+    3.- Create the services to handle the business logic. <- Done
+    4.- Create the controllers to handle the requests and responses <- Done
+    5.- Implement logic on controllers and services in this order: Service -> Controller
+    6.- Test endpoints with Postman.
+
+Mistakes:
+1.- Ensure to use @Entity on models and ensure the relationships using @OneToMany, @ManyToOne, etc.
