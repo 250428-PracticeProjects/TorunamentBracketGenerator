@@ -8,3 +8,7 @@ Backend development steps:
 
 Mistakes:
 1.- Ensure to use @Entity on models and ensure the relationships using @OneToMany, @ManyToOne, etc.
+
+Notes:
+1.- Create an endpoint to request players by id
+2.- Put "winner" default value to empty string in the Player model, you can only set it when the game is finished with patch endpoint.

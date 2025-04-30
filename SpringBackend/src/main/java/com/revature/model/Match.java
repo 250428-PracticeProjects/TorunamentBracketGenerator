@@ -18,7 +18,9 @@ public class Match {
 
     private String score;
 
-    private String winner;
+    @ManyToOne
+    @JoinColumn(name = "winner_id")
+    private Player winner;
 
     public Match() {
 
@@ -49,10 +51,10 @@ public class Match {
     public void setScore(String score) {
         this.score = score;
     }
-    public String getWinner() {
+    public Player getWinner() {
         return winner;
     }
-    public void setWinner(String winner) {
+    public void setWinner(Player winner) {
         this.winner = winner;
     }
      // To string method
