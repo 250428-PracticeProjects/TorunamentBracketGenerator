@@ -20,9 +20,14 @@ public class PlayerController {
     }
     // Add methods to handle player-related requests here
     @PostMapping("register")
-    public String registerPlayer() {
+    public Player registerPlayer() {
         // Logic to register a player
         // TODO - Add validation and business logic as needed
+        // Validate the player does not already exist
+
+
+
+
         return "Player registered successfully!";
     }
     // Get all players

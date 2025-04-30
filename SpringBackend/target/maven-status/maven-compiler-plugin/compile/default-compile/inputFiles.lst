@@ -1,0 +1,9 @@
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/BracketgenApplication.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/controller/MatchController.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/controller/PlayerController.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/model/Match.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/model/Player.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/repository/MatchRepository.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/repository/PlayerRepository.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/service/MatchService.java
+/home/edgarrd11/Revature/TorunamentBracketGenerator/SpringBackend/src/main/java/com/revature/service/PlayerService.java
