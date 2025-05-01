@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("matches")
 @RestController
@@ -45,12 +46,25 @@ public class MatchController {
     }
 
     @PatchMapping("winner/{matchId}")
-    public ResponseEntity<Match> updateMatchWinner(@PathVariable int matchId, @RequestParam Player winner) {
+    public ResponseEntity<Match> updateMatchWinner(
+            @PathVariable int matchId,
+            @RequestBody Map<String, Integer> requestBody) {
+
+        Integer winnerId = requestBody.get("winnerId");
+        if (winnerId == null) {
+            return ResponseEntity.badRequest().build(); // 400 Bad Request
+        }
+
+        Player winner = playerService.getPlayerById(winnerId);
+        if (winner == null) {
+            return ResponseEntity.notFound().build(); // 404 Not Found
+        }
+
         Match updatedMatch = matchService.updateMatchWinner(matchId, winner);
         if (updatedMatch == null) {
             return ResponseEntity.notFound().build(); // 404 Not Found
         }
+
         return ResponseEntity.ok(updatedMatch); // 200 OK
     }
-
 }

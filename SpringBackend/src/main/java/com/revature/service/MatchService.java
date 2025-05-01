@@ -4,13 +4,12 @@ import com.revature.model.Player;
 import com.revature.repository.MatchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class MatchService {
     private final MatchRepository matchRepository;
-
+    // Constructor-based dependency injection
     @Autowired
     public MatchService(MatchRepository matchRepository) {
         this.matchRepository = matchRepository;
@@ -30,7 +29,9 @@ public class MatchService {
 
     // Update match winner
     public Match updateMatchWinner(int matchId, Player winner) {
+        // Find the match by ID
         Match match = matchRepository.findById(matchId).orElse(null);
+
         if (match != null) {
             match.setWinner(winner);
             return matchRepository.save(match);
